@@ -1,0 +1,60 @@
+Not a bugs become defects (only the exposed bugs/found through testing become defects) 
+Known bugs are just tip of the iceberg 
+
+Prefer C++ programming constructs instead of equivalent C constructs (e.g., C++ style casts instead of C style casts) 
+Improving readability 
+	-> Proper variable names 
+	-> Reducing nesting levels 
+	-> Cryptic code should be avoided; readable code is more important than cryptic code 
+	-> Adding comments explaining the intent or meaning behind the code 
+
+Beware of typing mistakes (like missing comma, extra semi-colon etc). 
+Avoid low-level language features like bit-fields, unions etc. 
+
+Ensure proper termination of loops 
+Make sure variables are always initialised (especially local ones - because they are not initialized to zero by default) 
+Converting natural language statements directly to code is risky 
+Do not use bitwise and logical operators interchangeably 
+Beware of overflow 
+	-> especially in casts and expressions - by default integral expressions are integers 
+	-> use larger data types 
+
+Floating point numbers are not intuitive
+	-> Divide by zero -> INF
+	-> any operation on INF becomes NAN 
+	-> you cannot directly compare nan with nan using ==; you have to use isnan
+	-> never ever compare floating points for equality using == operator or != operator 
+		-> use a project wide error margin and use it for accommodating the difference in calc error 
+	-> don’t ever use floating number in looping conditions 
+	-> doubles - same thing applies :-) 
+	
+Do not depend on side-effect operations (like ++x, x—-, etc) 	
+	
+Do not comment-out code 
+Avoid long sourcelines (not more than 80 characters) 
+Do not have any dead code (unreachable code) 
+
+Use sonarcube which is a dashboard for technical metrics 
+	-> percentage code duplication
+	-> code coverage percentage
+	-> line of code, cyclomatic complexity 
+	-> ... 
+
+Use a clone analyser tool 
+	* simian (similarity analyser) (commercial - but very affordable) 
+	* pmd-cpd (copy paste detector) - free open source tool 
+
+* Prefer new and delete instead of malloc and free 
+* Use symmetric form of new and deletes 
+	-> if array new, use array delete
+	-> if you use placement new, use placement delete 
+	-> if you use a plain new, use plain delete
+* To avoid all this headache in malloc and new and delete and free, use smart pointers 
+* Don’t use any pointers in your programs - use smart pointers instead! 
+
+* Provide virtual destructors in base classes (that are used polymorphically) 
+* Prefer passing class objects by reference instead of passing them by value (because objects get sliced) 
+* If you have any resources in your classes, then provide default constructor, assignment operator, copy constructor and then a destructor (BIG 4) 
+* Beware of hiding data members in constructors 
+* Do not chain constructors inside the constructor body - you can provide them in the constructor initialiser list 
+* List members in an initialiser list in the order in which they are declared
