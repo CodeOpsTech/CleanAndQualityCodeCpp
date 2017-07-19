@@ -58,3 +58,37 @@ Use a clone analyser tool
 * Beware of hiding data members in constructors 
 * Do not chain constructors inside the constructor body - you can provide them in the constructor initialiser list 
 * List members in an initialiser list in the order in which they are declared
+
+Day 2: 
+* Prefer standard library functions instead of hand-coded logic 
+* Using features like lambdas, auto keyword, etc. can help you write more readable and shorter code 
+* Adopt a coding guidelines - adhere to it 
+* Most real-world software is badly written, but works. So, don’t give up and try keep improving 
+* Try adopting TDD and ATDD - write tests before writing code 
+* Adopt relevant tools, at least one of the from each of the following categories: 
+
+Many kinds of tools you can use 
+
+* Static analysis tools 
+	-> look for bug patterns
+	cppcheck, pc-lint/flexlint, parasoft cpptest, goanna, coverity, …
+
+* clone detection tools
+	-> DuDE - duplicate detector, simian, pmd-cpd 
+
+* metric tools 
+	-> CCCC (free tool), understand, infusion/incode 
+
+* dynamic analysis tools (memory leaks, security problems, etc) 
+	-> valgrind, Dr. Memory, … 
+
+* Unit testing tools
+	-> CppUnit, open source CppTest   
+
+* smell detection tools
+	-> infusion/incode, cppdepend, structure101, sonarqube … 
+
+* sonarqube 
+	-> dashboard for quality  
+
+* CodeCoverage
