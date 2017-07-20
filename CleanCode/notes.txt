@@ -91,4 +91,38 @@ Many kinds of tools you can use
 * sonarqube 
 	-> dashboard for quality  
 
-* CodeCoverage
+---
+* One Declaration Rule (One Definition Rule) 
+	* Ensure that the class/structure/enum/… the declarations are same across translation units 
+
+* Avoid overloading AND overriding together 
+
+* Design principles are key for creating high-quality software
+
+* SOLID	
+	* Single Responsibility -> one abstraction, one responsibility 
+	* Open Closed -> open for extension, but closed for modification 
+	* Liskov’s Substitution -> “is-a” relationship should hold 
+	* Interface Segregation -> clients should not be forced to depend on interfaces they do not use 
+	* Dependency Inversion -> depend on abstractions and not on concrete implementations 
+
+* Booch’s fundamental principles
+	* Abstraction
+	* Encapsulation
+	* Moduarlization
+	* Hierarchy 
+
+* Principles behind design patterns
+	* Program to an interface, not to an implementation
+	* Prefer composition over inheritance 
+	* Encapsulate variation 
+
+Best practices 
+	* Avoid calling virtual functions from constructors 
+	* Avoid confusing overloads
+	* Use override keyword for explicitly overriding the methods 
+	* Use generics if the behaviour between types don’t change; use inheritance if behaviour between types change 
+	* Use pure virtual functions for forcing derived types a contract 
+	* Use virtual functions for providing a default contract for its derived types
+	* Use non-virtual functions for providing default implementation for its derived types 
+	* Do not use arrays polymorphically 
