@@ -126,3 +126,34 @@ Best practices
 	* Use virtual functions for providing a default contract for its derived types
 	* Use non-virtual functions for providing default implementation for its derived types 
 	* Do not use arrays polymorphically 
+
+——
+Day 4: 
+
+* How do we know if the design is effective? The answer is: “is it unit testable?” 
+
+* Smells can be viewed as violation of fundamental design principles. Effective designs do not have smells or have very few smells. 
+
+* TDD cycle: Red-Green-Refactor; Red - the test is failing. Green - the test is passing (the code may be smelly). Refactor - get rid of the smell. 
+
+* Design patterns emerge naturally when we apply design principles 
+
+* Composite: Deal with part-whole hierarchies. Do not differentiate between leaf nodes and composite nodes. Treat them uniformly. 
+
+* Factory method: Control object creation. It is useful for restricting the number of objects created - singleton, multiton. It is also useful for applying flyweight pattern. 
+
+* Flyweight pattern: Reuse existing objects. Constant or immutable objects. 
+
+* Builder: Use a dedicate class for building a complex object. 
+
+* Strategy: To encapsulate variation in algorithms. Choose a specific algorithm or approach at runtime. 
+
+* Visitor: Allow traversing a tree-like structure 
+
+* Command: Encapsulate actions. Convert actions to objects and execute them as needed. 
+
+* Facade: Hide the internal complexity of how subsystems interact with each other. 
+
+* Pipe-and-filter architecture style: It is a style of architecting systems where output from one component is given as input to next component. 
+
+——
